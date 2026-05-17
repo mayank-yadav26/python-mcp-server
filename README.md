@@ -36,7 +36,23 @@ To add this MCP server to VS Code:
 
 1. Open the Command Palette: `Ctrl + Shift + P`
 2. Search for and select: **MCP: Open User Configuration**
-3. Add your server configuration to the MCP servers section
+3. Add your server configuration to the MCP servers section:
+
+```json
+{
+  "servers": {
+    "python-mcp": {
+      "command": "<PROJECT_ROOT>/.venv/bin/python",
+      "args": [
+        "<PROJECT_ROOT>/server.py"
+      ]
+    }
+  }
+}
+```
+
+Replace `<PROJECT_ROOT>` with the absolute path to this project directory (e.g., `/home/mayank/MyProjects/python-mcp-server`)
+
 4. Restart VS Code for changes to take effect
 
 ## Running the Server
